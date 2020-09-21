@@ -36,13 +36,13 @@ describe('#largestSubarraySum', function() {
 
   it('returns the largest subarray sum when all the items are negative', function() {
 		let array = [-1, -1, -5, -3, -7, -4, -5, -6, -100, -4]
-		expect(largestSubarraySum(array)).toEqual(0)
+		expect(largestSubarraySum(array)).toEqual(-1)
   });
 
   it('runs within the time limit - in O(n) time, instead of O(n^2) time', function () {
     let timeLimit = 1000; // 1 seconds
     this.timeout(timeLimit)
-    let array = new Array(1000).fill(1); // should result in sum of 10000
+    let array = new Array(1000).fill(1); // should result in sum of 1000
     expect(largestSubarraySum(array)).toEqual(1000)
   });
 });
